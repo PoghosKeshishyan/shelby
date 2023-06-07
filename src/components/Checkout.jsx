@@ -1,16 +1,12 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react';
 
 export function Checkout({ checkout, setCheckout, bookingPageLabel }) {
   const [minValue, setMinValue] = useState('');
 
   useEffect(() => {
-    let date = new Date();
-    let str = date.getFullYear() + '-' + 
-              ((date.getMonth() + 1) > 9 ? date.getMonth() + 1 : '0' + (date.getMonth() + 1)) 
-              + '-' + ((date).getDate() > 9 ? date.getDate() : '0' + (date.getDate()));
-    setMinValue(str);
+    const today = new Date().toISOString().split('T')[0]; 
+    setMinValue(today); 
   }, []);
-
 
   return (
     <div>
