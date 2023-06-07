@@ -1,0 +1,137 @@
+.Ratings {
+    background: url(../../public/images/rating.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+    height: 80vh;
+    margin-top: 80px;
+    padding: 40px;
+    position: relative;
+
+    .container {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        transform: translateY(-50%);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 2.5rem;
+
+        div {
+            text-align: center;
+            padding-top: 20px;
+
+            .rating {
+                font-size: 8rem;
+                color: var(--white);
+                font-weight: 700;
+            }
+
+            .heading {
+                font-size: 1.1rem;
+                color: var(--white);
+                font-weight: 600;
+            }
+
+            .title {
+                padding-top: 20px;
+                color: var(--white);
+                font-weight: 400;
+            }
+        }
+    }
+}
+
+@media (max-width: 1220px) {
+    .Ratings {
+        .container {
+            margin-top: 20px;
+            padding-top: 0;
+            flex-wrap: wrap;
+            gap: 1rem;
+
+            div {
+                padding-top: 0;
+
+                .rating {
+                    font-size: 6rem;
+                }
+
+                .title {
+                    font-size: .8rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1150px) {
+    .Ratings {
+        height: 125vh;
+    }
+}
+
+@media (max-width: 910px) {
+    .Ratings {
+        height: 140vh;
+
+        .container {
+            margin-top: 30px;
+            padding-top: 0;
+            flex-wrap: wrap;
+            gap: 2rem;
+
+            div {
+                padding-top: 0;
+                margin: 5px 0;
+
+                .rating {
+                    font-size: 6rem;
+                }
+
+                .title {
+                    font-size: .8rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 570px) {
+    .Ratings {
+        height: 150vh;
+
+        .container {
+            margin-top: 50px;
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    .Ratings {
+        height: 160vh;
+
+        .container {
+            div {
+                .rating {
+                    font-size: 4rem;
+                }
+
+                .title {
+                    padding: 20px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 350px) {
+    .Ratings {
+        h2 {
+            font-size: 1rem;
+        }
+    }
+}
